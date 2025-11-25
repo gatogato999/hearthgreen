@@ -3,40 +3,40 @@ export const products = [
     id: 1,
     name: "Monstera Deliciosa",
     price: 25,
-    image: "../assets/monstera.jpg",
+    image: "01Adypsis.jpg",
   },
 
   {
     id: 2,
     name: "Snake Plant",
     price: 18,
-    image: "../assets/snake.jpg",
+    image: "02ciamana.jpeg",
   },
 
   {
     id: 3,
     name: "Pothos Golden",
     price: 15,
-    image: "../assets/pothos.jpg",
+    image: "03orcidona.jpg",
   },
   {
     id: 4,
-    name: "planet 4",
-    price: 5,
-    image: "../assets/plant4.jpg",
+    name: "Pachira plant",
+    price: 25,
+    image: "04Pachira.jpg",
   },
 
   {
     id: 5,
-    name: "planet 5 Plant",
-    price: 78,
-    image: "../assets/plant5.jpg",
+    name: "Scheffleraarb Gerda",
+    price: 68,
+    image: "05ScheffleraarbGerda.jpg",
   },
 
   {
     id: 6,
-    name: "palnet 6",
+    name: "slamandra",
     price: 55,
-    image: "../assets/palant6.jpg",
+    image: "06slamandra.jpg",
   },
 ];

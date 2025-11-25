@@ -5,10 +5,13 @@ import { addToCart } from "../cartSlice";
 export default function Products() {
   const dispatch = useDispatch();
   return (
-    <div>
+    <div className="product-page">
       <h1>Products</h1>
+      <h1></h1>
       {products.map((p) => (
-        <div key={p.id}>
+        <div className="product-card" key={p.id}>
+          <img src={p.image} alt={p.name} className="plantImg" />
+          <br />
           {p.name} - ${p.price}{" "}
           <button onClick={() => dispatch(addToCart(p))}>Add to Cart</button>
         </div>

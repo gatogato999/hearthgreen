@@ -9,18 +9,20 @@ function App() {
   const [currentPage, setCurrentPage] = useState("home");
 
   let pageComponent;
-  if (currentPage === "home") pageComponent = <Home />;
+  if (currentPage === "home")
+    pageComponent = <Home setCurrentPage={setCurrentPage} />;
   else if (currentPage === "product") pageComponent = <Products />;
   else if (currentPage === "cart") pageComponent = <Cart />;
 
   return (
-    <div>
-      <nav
-        style={{
-          marginBottom: "200px",
-        }}
-      >
-        <button onClick={() => setCurrentPage("home")}>Home</button>
+    <div className="wholePage">
+      <nav className="nav">
+        <button
+          onClick={() => setCurrentPage("home")}
+          setCurrentPage={setCurrentPage}
+        >
+          Home
+        </button>
         {" | "}
         <button onClick={() => setCurrentPage("product")}>Products</button>
         {" | "}

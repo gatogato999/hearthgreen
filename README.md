@@ -4,16 +4,17 @@
 
 ## [ x ] React and React-Redux related code
 
-## [ ] landing page
+## [ x ] landing page
 
 - [ X ] company name [HearthGreen]
-- [ ] background image
-- [ ~ ] paragraph about the company
-- [ ] [get started] button linking to the product listing page
+- [ x ] background image
+- [ x ] paragraph about the company
+- [ x ] [get started] button linking to the product listing page
 
 ## [ ] product listing page
 
-- [ ~ ] six unique houseplants for sale , each displaying thumbnail, name , and price
+- [ ~ ] six unique houseplants for sale , each displaying thumbnail, name ,
+  and price
 - [ ] group the plants into at least three categories on the page
 - [ ] an [add to cart] button for each plant:
   - [ ] after selecting it the shopping cart icon increases by one

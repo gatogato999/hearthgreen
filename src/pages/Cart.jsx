@@ -6,10 +6,11 @@ export default function Cart() {
 
   if (!cart.length) return <h1>Your cart is empty.</h1>;
   return (
-    <div>
+    <div className="cart-page">
       <h1>shopping Cart </h1>
       {cart.map((item, index) => (
         <div key={index}>
+          <img src={item.image} />
           {item.name} - ${item.price}
         </div>
       ))}
