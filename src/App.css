@@ -49,7 +49,6 @@
 }
 
 .wholePage {
-  height: 30lh;
   align-items: center;
   justify-content: center;
   backdrop-filter: blur(10px);
@@ -66,20 +65,42 @@
 }
 
 .product-page {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  border: 5px lawngreen dotted;
+  display: flexbox;
+  flex-flow: column;
+  justify-self: center;
+  justify-items: center;
+  width: 100%;
 }
 
-.plantImg {
+.category {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.cat-container {
+  padding-top: 5px;
+  border: red dotted;
+  margin: 0px;
   width: 100%;
-  background-color: darkblue;
-  border: 5px red;
+}
+
+.category {
+  padding: 5px;
+  border: darkolivegreen dotted;
+  margin: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 .product-card {
-  border: 5px red dotted;
-  width: 50%;
   padding: 5px;
-  margin: 5px;
+  width: fit-content;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+
+.plantImg {
+  width: 100px;
+  height: 20vh;
 }

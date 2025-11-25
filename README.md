@@ -11,15 +11,15 @@
 - [ x ] paragraph about the company
 - [ x ] [get started] button linking to the product listing page
 
-## [ ] product listing page
+## [ x ] product listing page
 
-- [ ~ ] six unique houseplants for sale , each displaying thumbnail, name ,
+- [ x ] six unique houseplants for sale , each displaying thumbnail, name ,
   and price
-- [ ] group the plants into at least three categories on the page
-- [ ] an [add to cart] button for each plant:
-  - [ ] after selecting it the shopping cart icon increases by one
-  - [ ] after selectining it the button becomes disabled
-  - [ ] after selecting it , the appropriate plant gets added to the shopping cart
+- [ x ] group the plants into at least three categories on the page
+- [ x ] an [add to cart] button for each plant:
+  - [ x ] after selecting it the shopping cart icon increases by one
+  - [ x ] after selectining it the button becomes disabled
+  - [ x ] after selecting it , the appropriate plant gets added to the shopping cart
 
 - ## [ ] header
 
