@@ -1,81 +1,45 @@
-import { useDispatch } from "react-redux";
 import { products } from "../data/products";
 import { addToCart } from "../cartSlice";
-import { useState } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import Header from "../components/Header";
 
-export default function Products() {
-  // logic to disable buttons
-  const [clicked, setClicked] = useState(new Set());
-  function handleClick(id) {
-    setClicked((prev) => new Set(prev).add(id));
-  }
-
+export default function Products({ setCurrentPage }) {
   const dispatch = useDispatch();
+  const cart = useSelector((state) => state.cart.items);
+
+  const isAdded = (id) => cart.some((item) => item.id === id);
+  const categories = ["Indoor", "Outdoor", "Succulent"];
   return (
-    <div className="product-page">
+    <div>
+      <Header setCurrentPage={setCurrentPage} />
       <h1>Products</h1>
-      <div className="cat-container">
-        <h4>Best Selling</h4>
-        <div className="category">
+      {categories.map((cat) => (
+        <section key={cat}>
+          <h2>{cat} </h2>
           {products
-            .filter((p) => p.categ === "best")
+            .filter((p) => p.categ === cat)
             .map((p) => (
-              <div className="product-card" key={p.id}>
-                <img src={p.image} alt={p.name} className="plantImg" />
+              <div
+                key={p.id}
+                style={{
+                  border: "1px solid gray ",
+                  margin: "10px",
+                }}
+              >
+                <h3>{p.name}</h3>
+                <p>{p.desc}</p>
+                <b>${p.price}</b>
                 <br />
-                {p.name} - {p.price}${" "}
                 <button
-                  onClick={() => {
-                    (dispatch(addToCart(p)), handleClick(p.id));
-                  }}
-                  disabled={clicked.has(p.id)}
+                  disabled={isAdded(p.id)}
+                  onClick={() => dispatch(addToCart(p))}
                 >
-                  Add to Cart
+                  {isAdded(p.id) ? "Added" : "Add To Cart "}
                 </button>
               </div>
             ))}
-        </div>
-        <h4>Royal Plants</h4>
-        <div className="category">
-          {products
-            .filter((p) => p.categ === "royal")
-            .map((p) => (
-              <div className="product-card" key={p.id}>
-                <img src={p.image} alt={p.name} className="plantImg" />
-                <br />
-                {p.name} - {p.price}${" "}
-                <button
-                  onClick={() => {
-                    (dispatch(addToCart(p)), handleClick(p.id));
-                  }}
-                  disabled={clicked.has(p.id)}
-                >
-                  Add to Cart
-                </button>
-              </div>
-            ))}
-        </div>
-        <h4>Economic Plants</h4>
-        <div className="category">
-          {products
-            .filter((p) => p.categ === "econ")
-            .map((p) => (
-              <div className="product-card" key={p.id}>
-                <img src={p.image} alt={p.name} className="plantImg" />
-                <br />
-                {p.name} - {p.price}${" "}
-                <button
-                  onClick={() => {
-                    (dispatch(addToCart(p)), handleClick(p.id));
-                  }}
-                  disabled={clicked.has(p.id)}
-                >
-                  Add to Cart
-                </button>
-              </div>
-            ))}
-        </div>
-      </div>
+        </section>
+      ))}
     </div>
   );
 }

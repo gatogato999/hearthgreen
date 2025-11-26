@@ -36,12 +36,12 @@
   - [ x ] name
   - [ x ] thumbnail
   - [ x ] unit price
-- [ ] icrease button for each plant type in the cart that increaments the number
+- [ x ] [icrease button] for each plant type in the cart that increaments the number
       of items in the cart by one each time it's clicked and updates all
       appropriate values
-- [ ] decrease button for each plant type in the cart that decrements the number
+- [ x ] [decrease button] for each plant type in the cart that decrements the number
       of items in the cart by on eeach time it's clicked and updates all
       appropriate values .
-- [ ] a [delete] button to remove the whole plant type from the cart
-- [ ] a [ chechout ] button (displays the message "coming soon")
-- [ ] a [ continue shopping] button that links to the product listing page
+- [ x ] a [delete] button to remove the whole plant type from the cart
+- [ x ] a [ chechout ] button (displays the message "coming soon")
+- [  ] a [ continue shopping] button that links to the product listing page
