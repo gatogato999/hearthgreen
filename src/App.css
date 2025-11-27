@@ -35,3 +35,37 @@ aside>p {
   margin-top: 60px;
   font-weight: 500;
 }
+
+/* header  */
+
+header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+  background-color: #00ff0f82;
+}
+
+header>h2 {
+  cursor: pointer;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 50%;
+}
+
+nav>button {
+  background-color: #00ff0f82;
+  border-radius: 5px;
+  border: 1px solid transparent;
+  padding: 2px;
+  font-size: 1em;
+  font-weight: 500;
+  cursor: pointer;
+
+}

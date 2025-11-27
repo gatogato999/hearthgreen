@@ -5,10 +5,8 @@ export default function Header({ setCurrentPage }) {
     state.cart.items.reduce((s, i) => s + i.quantity, 0),
   );
   return (
-    <header style={{ display: "flex", justifyContent: "space-between" }}>
-      <h2 style={{ cursor: "pointer" }} onClick={() => setCurrentPage("home")}>
-        HearthGreen 🎍
-      </h2>
+    <header>
+      <h2 onClick={() => setCurrentPage("home")}>HearthGreen 🎍</h2>
       <nav>
         <button onClick={() => setCurrentPage("product")}>Products</button>
         <button onClick={() => setCurrentPage("cart")}>
