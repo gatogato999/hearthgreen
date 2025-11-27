@@ -18,21 +18,35 @@ export default function Cart({ setCurrentPage }) {
   );
   if (items.length === 0)
     return (
-      <div>
+      <div
+        style={{
+          display: "grid",
+          alignItems: "center",
+          gap: "100%",
+        }}
+      >
         <Header setCurrentPage={setCurrentPage} />
-        <h2>Your cart is empty .</h2>
+        <h2
+          style={{
+            color: "tomato",
+            fontFamily: "sans-serif",
+            justifySelf: "center",
+          }}
+        >
+          {" "}
+          Your cart is empty !!!
+        </h2>
       </div>
     );
 
   return (
-    <div>
+    <div className="cart-page">
       <Header setCurrentPage={setCurrentPage} />
 
-      <h1>Your Cart</h1>
-
+      <h1> Cart</h1>
       {items.map((item) => (
-        <div key={item.id} style={{ border: "1px solid gray", margin: "10px" }}>
-          <img src={item.image} width="100" alt={item.name} />
+        <div className="cart-card" key={item.id}>
+          <img src={item.image} alt={item.name} />
           <h3>{item.name}</h3>
           <p>${item.price} each</p>
 

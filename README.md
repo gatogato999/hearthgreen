@@ -21,14 +21,14 @@
   - [ x ] after selectining it the button becomes disabled
   - [ x ] after selecting it , the appropriate plant gets added to the shopping cart
 
-- ## [ ] header
+- ## [ x ] header
 
   - [ x ] displays on both the product listing page and shopping cart page
   - [ x ] a shopping cart icon with a value that displays the total number of items
     in the cart
   - [ x ] navigation to eiter of the other pages
 
-## [ ] shopping cart page
+## [ x ] shopping cart page
 
 - [ x ] the total number of plants in the cart
 - [ x ] the total cost of all items in the cart
