@@ -1,0 +1,44 @@
+
+name: deploy react vite to github pages
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [18.x, 20.x, 22.x]
+        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+
+    steps:
+    - name: chechout repository
+    - uses: actions/checkout@v4
+    
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: 'pnpm'
+
+    - name: setup pnpm
+      uses: pnpm/action-setup@v2
+      with:
+        version: 10
+
+    - name: install dependencies
+    - run: pnpm install
+
+    - name: build project
+      run: pnpm build
+
+    - name: deploy to github pages
+      uses: peaceiris/action-gh-pages@v6
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./dist
