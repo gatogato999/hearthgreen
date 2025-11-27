@@ -1,6 +1,12 @@
 # pre-requisites
 
-## [ ] Github repo
+its a houseplants sale company.
+
+## [ x ] Github repo
+
+[![Pages Deploy](https://github.com/gatogato999/hearthgreen/actions/workflows/deploy.yml/badge.svg)](https://github.com/gatogato999/hearthgreen/actions/workflows/deploy.yml)
+
+Live site: https://gatogato999.github.io/hearthgreen/
 
 ## [ x ] React and React-Redux related code
 
