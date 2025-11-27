@@ -12,22 +12,16 @@ export default function Products({ setCurrentPage }) {
   return (
     <div>
       <Header setCurrentPage={setCurrentPage} />
-      <h1>Products</h1>
+      <h1 style={{ textAlign: "center" }}>Products</h1>
       {categories.map((cat) => (
-        <section key={cat}>
+        <section key={cat} className="category">
           <h2>{cat} </h2>
           {products
             .filter((p) => p.categ === cat)
             .map((p) => (
-              <div
-                key={p.id}
-                style={{
-                  border: "1px solid gray ",
-                  margin: "10px",
-                }}
-              >
+              <div className="product-card" key={p.id}>
                 <h3>{p.name}</h3>
-                <img src={p.image} width="100" alt={p.name} />
+                <img src={p.image} alt={p.name} />
                 <p>{p.desc}</p>
                 <b>${p.price}</b>
                 <br />

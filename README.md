@@ -11,7 +11,7 @@
 - [ x ] paragraph about the company
 - [ x ] [get started] button linking to the product listing page
 
-## [ ] product listing page
+## [ x ] product listing page
 
 - [ x ] six unique houseplants for sale , each displaying thumbnail, name ,
   description, and price
@@ -21,7 +21,7 @@
   - [ x ] after selectining it the button becomes disabled
   - [ x ] after selecting it , the appropriate plant gets added to the shopping cart
 
-- ## [ x ] header
+- ## [ ] header
 
   - [ x ] displays on both the product listing page and shopping cart page
   - [ x ] a shopping cart icon with a value that displays the total number of items

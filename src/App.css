@@ -1,3 +1,4 @@
+/* landing page */
 .home-page {
   height: 99vh;
   background: url('bg2.jpg') no-repeat;
@@ -19,7 +20,6 @@ main {
 main>h1 {
   margin-top: 0px;
 }
-
 
 aside {
   height: 99vh;
@@ -67,5 +67,72 @@ nav>button {
   font-size: 1em;
   font-weight: 500;
   cursor: pointer;
+}
 
+/* products page */
+.category {
+  display: grid;
+  gap: 0rem;
+  grid-template-columns: repeat(2, 1fr);
+  margin-bottom: 3rem;
+}
+
+.category>h2 {
+  grid-column: 1/-1;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.product-card {
+  border: 1px solid gray;
+  background: #eee;
+  padding: 1rem;
+  margin: 20px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* controls verticla spacing between elements */
+  gap: 0rem;
+}
+
+.product-card img {
+  width: 50%;
+  height: 50%;
+  display: block;
+  border-radius: 4px;
+}
+
+@media screen and (min-width : 900px) {
+  .product-card img {
+    width: 40%;
+    height: 70%;
+  }
+
+  .product-card p {
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+  }
+}
+
+.product-card h3 {
+  margin: 5px;
+  font-size: 1.2rem;
+}
+
+.product-card p {
+  margin: 0;
+  /* expand description so button stays under */
+  flex-grow: 1;
+}
+
+.product-card b {
+  font-size: 1.2rem;
+}
+
+.product-card button {
+  /* padding: 0 0.5rem 0.8rem; */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }
