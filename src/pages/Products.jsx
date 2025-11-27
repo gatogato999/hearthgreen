@@ -27,6 +27,7 @@ export default function Products({ setCurrentPage }) {
                 }}
               >
                 <h3>{p.name}</h3>
+                <img src={p.image} width="100" alt={p.name} />
                 <p>{p.desc}</p>
                 <b>${p.price}</b>
                 <br />

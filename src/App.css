@@ -1,13 +1,37 @@
 .home-page {
-  height: 95vh;
+  height: 99vh;
   background: url('bg2.jpg') no-repeat;
-  border: 1px dotted;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 35% 65%;
   align-items: center;
+  padding: 8px;
 }
 
 main {
-  display: grid;
+  height: 99vh;
   justify-content: center;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  display: flex;
+  flex-direction: column;
+}
+
+main>h1 {
+  margin-top: 0px;
+}
+
+
+aside {
+  height: 99vh;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+aside>p {
+  margin-top: 60px;
+  font-weight: 500;
 }

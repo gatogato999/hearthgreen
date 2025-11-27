@@ -32,7 +32,7 @@ export default function Cart({ setCurrentPage }) {
 
       {items.map((item) => (
         <div key={item.id} style={{ border: "1px solid gray", margin: "10px" }}>
-          <img src={item.thumbnail} width="100" alt={item.name} />
+          <img src={item.image} width="100" alt={item.name} />
           <h3>{item.name}</h3>
           <p>${item.price} each</p>
 
@@ -51,6 +51,10 @@ export default function Cart({ setCurrentPage }) {
       ))}
 
       <h2>Cart Total: ${cartTotal}</h2>
+
+      <button onClick={() => setCurrentPage("product")}>
+        Continue Shopping
+      </button>
 
       <button onClick={() => dispatch(clearCart())}>Clear Cart</button>
 

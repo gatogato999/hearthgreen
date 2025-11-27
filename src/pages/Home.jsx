@@ -2,7 +2,7 @@ export default function Home({ setCurrentPage }) {
   return (
     <div className="home-page" style={{}}>
       <main>
-        <h1> HearthGreen 🌿</h1>
+        <h1> HearthGreen </h1>
         <p>Beautiful houseplants for your peaceful home.</p>
       </main>
       <aside>
